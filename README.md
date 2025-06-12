@@ -40,7 +40,7 @@ A simple and powerful web app to transcribe voice notes into text using **Azure 
 git clone https://github.com/your-username/voice-notes-transcriber.git
 cd voice-notes-transcriber
 
-2. **Create .env file**
+Create .env file
 
 Inside the project folder, create a .env file:
 
