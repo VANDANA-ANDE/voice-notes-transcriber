@@ -1,3 +1,4 @@
 streamlit
 python-dotenv
 azure-cognitiveservices-speech
+fpdf
