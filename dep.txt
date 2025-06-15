@@ -1,0 +1,72 @@
+Step-by-Step Deployment (Azure App Service)
+1. Create Azure App Service
+Go to Azure Portal
+
+Create a Web App resource
+
+Runtime stack: Python 3.8+
+
+OS: Linux
+
+Region: Same as your Azure Speech resource
+
+SKU: Free (for development) or Basic
+
+Choose "Deploy from GitHub" under Deployment > Deployment Center
+
+2. Configure GitHub Deployment
+Connect your GitHub repo in the Azure App Service setup
+
+Choose the correct branch (e.g., main)
+
+Azure will auto-deploy on every push
+
+3. Add Azure Environment Variables
+In Azure Portal → App Service → Configuration → Application Settings, add:
+
+ini
+Copy
+Edit
+SPEECH_KEY=your_azure_speech_key_here
+SPEECH_REGION=your_azure_region_here
+Click Save and restart the web app.
+
+4. Configure Startup Command
+Go to App Service > Configuration > General Settings, and set:
+
+yaml
+Copy
+Edit
+Startup Command: streamlit run app.py --server.port 8000 --server.enableCORS false
+Or, if you use a custom startup file, adjust accordingly.
+
+5. Add requirements.txt
+Make sure all dependencies are listed, e.g.:
+
+nginx
+Copy
+Edit
+streamlit
+azure-cognitiveservices-speech
+python-dotenv
+fpdf
+6. (Optional) Add runtime.txt
+To explicitly set the Python version:
+
+Copy
+Edit
+python-3.8.17
+7. Test Your App 🎉
+After deployment, go to the Azure-provided URL:
+
+arduino
+Copy
+Edit
+https://your-app-name.azurewebsites.net
+🧪 Troubleshooting Tips
+If you see "ModuleNotFoundError", check requirements.txt
+
+If the app doesn't start, verify the Startup Command
+
+If secrets aren't working, check App Settings for typos or restart the service
+
