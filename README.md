@@ -14,12 +14,6 @@ A simple and powerful web app to transcribe voice notes into text using **Azure 
 
 ---
 
-## 📸 Screenshot
-
-![Screenshot](screenshot.png)
-
-> 💡 Tip: Add a screenshot of your running app (use `Cmd + Shift + 4` on Mac), save it as `screenshot.png`, and commit it to your repo.
-
 ---
 
 ## 🧠 Tech Stack
