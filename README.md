@@ -1,61 +1,39 @@
-# 🎙️ AI Voice Notes Transcriber
+AI Voice Notes Transcriber
+This project is an AI-powered voice notes transcription web application built using Python, Streamlit, and Azure Cognitive Services Speech SDK. The app enables users to upload or record audio files (WAV/MP3) and instantly convert them into accurate, readable text transcripts.
 
-A simple and powerful web app to transcribe voice notes into text using **Azure Speech Services**. Upload an audio file (.wav/.mp3) and get accurate, fast transcription in seconds.
+Key Features
+Speech-to-Text Transcription: Utilizes Azure Speech-to-Text API for highly accurate and real-time voice transcription.
 
----
+User-Friendly Interface: Clean, intuitive UI built with Streamlit for easy uploading and playback of audio files.
 
-## 🚀 Features
+Audio Playback Controls: Users can listen to the uploaded audio alongside the generated transcript.
 
-- 🎧 Upload `.wav` or `.mp3` files
-- 💬 Transcribe audio using Azure Cognitive Services
-- 📄 View and edit the transcribed text
-- 📥 Download transcription as `.txt`
-- 🌐 Built with **Streamlit** for a clean web interface
+Download Transcript: Option to download the transcript as a PDF (optional, can be added).
 
----
+Cloud Deployment: Fully deployed on Microsoft Azure App Service with automated CI/CD pipeline using GitHub Actions.
 
----
+Secure Configuration: Uses Azure App Service environment variables to securely manage API keys.
 
-## 🧠 Tech Stack
+Technologies Used
+Python 3.8+
 
-- [Azure Speech-to-Text](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/)
-- [Python](https://www.python.org/)
-- [Streamlit](https://streamlit.io/)
-- [python-dotenv](https://pypi.org/project/python-dotenv/)
-- [GitHub](https://github.com)
+Streamlit for frontend UI
 
----
+Azure Cognitive Services Speech SDK
 
-## 🛠️ Setup Instructions
+GitHub Actions for continuous deployment
 
-1. **Clone the repo**
+Azure App Service for hosting
 
-```bash
-git clone https://github.com/your-username/voice-notes-transcriber.git
-cd voice-notes-transcriber
+Why This Project?
+This project demonstrates the integration of cloud AI services into a functional web app, showcasing skills in:
 
-Create .env file
+Cloud service provisioning and API consumption
 
-Inside the project folder, create a .env file:
+Building interactive web UIs with Streamlit
 
+CI/CD automation with GitHub Actions
 
-SPEECH_KEY=your_azure_speech_key
-SPEECH_REGION=your_azure_region
-Install dependencies
+Secure secrets management in cloud environments
 
-
-pip install -r requirements.txt
-Run the app
-
-
-streamlit run app.py
-
-📂 Project Structure
-
-
-voice-notes-transcriber/
-├── app.py               # Main Streamlit app
-├── .env                 # Secrets (Azure keys)
-├── requirements.txt     # Dependencies
-├── README.md            # Project readme
-└── screenshot.png       # App screenshot (optional)
+It serves as a portfolio-ready project that highlights practical experience with AI-powered application development and cloud deployment.
