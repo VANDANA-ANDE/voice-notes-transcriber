@@ -9,6 +9,9 @@ load_dotenv()
 
 speech_key = st.secrets["SPEECH_KEY"]
 service_region = st.secrets["SPEECH_REGION"]
+# DEBUG: Show partial keys (remove after testing)
+st.write("Speech Key (partial):", speech_key[:5] + "...")
+st.write("Service Region:", service_region)
 
 st.set_page_config(
     page_title="AI Voice Notes Transcriber",
