@@ -7,8 +7,8 @@ from fpdf import FPDF
 
 load_dotenv()
 
-speech_key = os.getenv("SPEECH_KEY")
-service_region = os.getenv("SPEECH_REGION")
+speech_key = st.secrets["SPEECH_KEY"]
+service_region = st.secrets["SPEECH_REGION"]
 
 st.set_page_config(
     page_title="AI Voice Notes Transcriber",
